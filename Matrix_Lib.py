@@ -141,7 +141,7 @@ def Dot_Product(v1, v2):
         total = [0, 0]
         for i in range(len(v1)):
             total = Cl.Complex_Sum(Cl.Complex_Prod(v1[i][j], v2[i]), total)
-    return total[0]
+    return tuple(total)
 
 
 # Norma de un vector
