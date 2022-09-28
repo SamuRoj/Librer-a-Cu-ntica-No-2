@@ -168,8 +168,8 @@ def Hermitian(matrix):
             if matrix[i][j] != aux[i][j]:
                 flag = False
     if flag:
-        return "Es hermitiana."
-    return "No es hermitiana."
+        return True
+    return False
 
 
 # Determinar si una matriz dada es unitaria
@@ -187,8 +187,8 @@ def Unitary(matrix):
             if result[i][j] != identity[i][j]:
                 flag = False
     if flag:
-        return "Es unitaria."
-    return "No es unitaria."
+        return True
+    return False
 
 
 # Producto tensor entre dos matrices o vectores

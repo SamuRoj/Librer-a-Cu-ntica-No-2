@@ -1,5 +1,6 @@
 import LibQuantum2 as Lib
 import Complex_Lib as Cl
+import Matrix_Lib as Ml
 import unittest
 
 class MyTestCase(unittest.TestCase):
@@ -34,6 +35,13 @@ class MyTestCase(unittest.TestCase):
         print("Ejemplo Número 2")
         print(Cl.Print_Complex(Lib.Transition(Lib.tsi, Lib.phi)))
         self.assertAlmostEqual(Lib.Transition(Lib.tsi, Lib.phi), (-0.02056, -0.13019))
+        print("Ejemplo de la mediana de una matriz")
+        Ml.print_matrix(Lib.Mean(Lib.omega, Lib.alpha))
+        self.assertAlmostEqual(Lib.Mean(Lib.omega, Lib.alpha), (((0.0, 0.0), (0.0, 0.0)), ((0.0, 0.0), (0.0, 0.0))))
+        print("Ejemplo de la varianza de la matriz ")
+        print(Cl.Print_Complex(Lib.Variance(Lib.omega, Lib.alpha)))
+        self.assertAlmostEqual(Lib.Variance(Lib.omega, Lib.alpha), (8, 0))
+
 
 if  __name__ == '__main__':
     print(unittest.main())
