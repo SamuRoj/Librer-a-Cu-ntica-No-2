@@ -43,21 +43,21 @@ Se reemplazan los valores que se encuetran entre <>
 Contiene las funciones que permiten realizar las pruebas dependiendo del tipo de experimento que se quiera simular, entre ellos está el juego de las canicas, la doble rendija, múltiple rendija clásica, entre otros. Algunas de las funciones que se encuentran dentro de este archivo son:
 
 ```
-Vectors(matrix)                    
+Vectors(matrix)                     'Se encarga de dar un formato a los eigenvectores que retorna la función Eigenvectors.'            
 
-Probability(vector, state)     
+Probability(vector, state)          'Dado un vector y una posición determina la probabilidad de que una partícula se encuentre en la posición solicitada.'
 
-Transition(vector1, vector2)    
+Transition(vector1, vector2)        'Dado dos vectores determina la probabilidad de que el vector 1 transite al vector 2.'
 
-Mean(matrix, vector)   
+Mean(matrix, vector)                'Determina el valor esperado de una matriz y la matriz final luego de aplicar este.'
 
-Variance(matrix, vector)   
+Variance(matrix, vector)            'Determina la varianza dados una matriz y un vector.'
 
-Eigenvalues(matrix)           
+Eigenvalues(matrix)                 'Determina los valores propios de una matriz.' 
 
-Eigenvectors(matrix)
+Eigenvectors(matrix)                'Determina los vectores propios de una matriz.'
 
-ProbabilityVector(state, vector)
+ProbabilityVector(state, vector)    'Determina la probabilidad de transitar de un estado inicial a un eigenvector.'
 ```
 
 ## Realizado con

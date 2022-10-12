@@ -32,6 +32,7 @@ def Mean(matrix, vector):
     identity = [[(1, 0) if i == j else (0, 0) for i in range(len(matrix[0]))] for j in range(len(matrix))]
     if Ml.Hermitian(matrix):
         mean = list(Ml.Dot_Product(Ml.Matrix_Action(matrix, vector), vector))
+        print(f"El valor esperado es: {Cl.Print_Complex(mean)}")
         result = Ml.Scalar_Product_Matrix(mean, identity)
         return tuple(result)
     return False
