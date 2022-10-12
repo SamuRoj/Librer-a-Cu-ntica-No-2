@@ -1,6 +1,6 @@
-# Programa simulación de lo clásico a lo cuántico
+# Teoría cuántica básica, observables y medidas
 
-Librería realizada en Python que contiene operaciones entre vectores y matrices para determinar la solución a un problema cuántico, como la probabilidad de un estado de un vector, l transición de un vector a otro, entre otras operaciones.
+Librería realizada en Python que contiene operaciones entre vectores y matrices para determinar la solución a un problema cuántico, como la probabilidad de un estado de un vector, l transición de un vector a otro, entre otras.
 
 ## Para Empezar
 
@@ -10,7 +10,7 @@ Lenguaje de programación Python, Idle o ejecución del programa desde terminal.
 
 ### Instalación y Ejecución
 
-Descarga de los archivos LibQuantum.py, Matrix_Lib.py, Complex_Lib.py y Tests.py en un mismo directorio, además es necesario tener instalada la librería matplotlib.pyplot, para la ejecución de una de las funciones que se encuentra dentro.
+Descarga de los archivos LibQuantum2, LibQuantum.py, Matrix_Lib.py, Complex_Lib.py y Tests.py en un mismo directorio, además es necesario tener instalada la librería numpy, para la ejecución de una de las funciones que se encuentra dentro.
 
 ## Ejecución de Pruebas
 
@@ -19,9 +19,9 @@ Descarga de los archivos LibQuantum.py, Matrix_Lib.py, Complex_Lib.py y Tests.py
 Dentro de este archivo se encuentran varias pruebas que se realizaron para verificar el programa, al ejecutarse Tests.py se observará el resultado de la operación y la validez de las pruebas junto con un formato de impresión de una matriz o vector dependiendo cual sea el caso.
 
 ```
-Juego de las canicas con las entradas de las matrices como fracciones
-
-0.41666666665+0.0i  0.25+0.0i  0.33333333335+0.0i
+Probabilidad de una posición particular.
+0.69231
+0.30769
 
 Ran 1 test in 0.007s
 
@@ -38,24 +38,26 @@ self.assertAlmostEqual(Lib3.<Nombre de la función a usar>(Parámetros), <Result
 Se reemplazan los valores que se encuetran entre <>
 ```
 
-### Archivo LibQuantum.py
+### Archivo LibQuantum2.py
 
 Contiene las funciones que permiten realizar las pruebas dependiendo del tipo de experimento que se quiera simular, entre ellos está el juego de las canicas, la doble rendija, múltiple rendija clásica, entre otros. Algunas de las funciones que se encuentran dentro de este archivo son:
 
 ```
-RoundDecimal(matrix)                    'Recibe una matriz y redondea cada uno de sus valores con 5 dígitos de precisión.'
+Vectors(matrix)                    
 
-MarblesGame(matrix, vector, clicks)     'Recibe una matriz, un vector y un entero llamado clicks que permite consultar el estado en que se encuentra el juego de las canicas, retorna el estado final.'
+Probability(vector, state)     
 
-DecimalSlits(matrix, vector, clicks)    'Recibe una matriz, un vector y los clicks, se usa cuando las entradas de la matriz sean decimales o fracciones, retorna la matriz con valores redondeados.'
+Transition(vector1, vector2)    
 
-MultipleSlits(matrix, vector, slits, target, clicks)    'Permite ingresar la cantidad de rendijas, objetivos y clicks para simular diferentes experimentos, retorna el estado final de acuerdo a los datos que se ingresaron.'
+Mean(matrix, vector)   
 
-MultipleSlitsQuantum(matrix, vector, slits, target, clicks)     'Recibe 5 parámetros y funciona de forma similar a la función MultipleSlits, solo que permite el trabajo con números complejos y la observación de fenómenos diferentes.'
+Variance(matrix, vector)   
 
-Interference(vector, quantum)           'Recibe un vector que nazca de la acción de una matriz de números enteros y otro vector a partir de la acción de un matriz de números complejos, los compara y determina si ha sucedido lo que se conoce como el fenómeno de interferencia.'
+Eigenvalues(matrix)           
 
-BarGraph(vector)                        'Recibe un vector y realiza un gráfico de barras de acuerdo al estado del vector.'
+Eigenvectors(matrix)
+
+ProbabilityVector(state, vector)
 ```
 
 ## Realizado con

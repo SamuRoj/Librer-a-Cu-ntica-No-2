@@ -1,5 +1,12 @@
 import Complex_Lib as Cl
 
+def RoundDecimal(matrix):
+    result = list(To_List(matrix))
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            for k in range(2):
+                result[i][j][k] = int(result[i][j][k])
+    return result
 
 def To_List(matrix):
     result = []
@@ -175,13 +182,8 @@ def Hermitian(matrix):
 # Determinar si una matriz dada es unitaria
 def Unitary(matrix):
     flag = True
-    result = Matrix_Product(matrix, Adjoint(matrix))
-    identity = [[[0] for _ in range(len(matrix[0]))] for _ in range(len(matrix))]
-    for i in range(len(matrix)):
-        for j in range(len(matrix[0])):
-            identity[i][j] = (1, 0) if i == j else (0, 0)
-    identity = To_Tuple(identity)
-    identity = tuple(identity)
+    result = RoundDecimal(Matrix_Product(matrix, Adjoint(matrix)))
+    identity = [[[1, 0] if i == j else [0, 0] for i in range(len(matrix[0]))] for j in range(len(matrix))]
     for i in range(len(result)):
         for j in range(len(result[0])):
             if result[i][j] != identity[i][j]:
