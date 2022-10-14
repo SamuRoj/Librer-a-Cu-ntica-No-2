@@ -68,9 +68,9 @@ Dynamic(arrays, initial)            'Recibe un arreglo de matrices complejas y u
 
 Este ejercicio pide generalizar un estado de dos partículas que cuentan con spin, luego esto se debe realizar con n partículas
 
-![Image Text](https://github.com/SamuRoj/Librer-a-Cu-ntica-No-2/blob/master/Ejercicio%204.5.3.png)
+![Image Text](https://github.com/SamuRoj/Librer-a-Cu-ntica-No-2/blob/master/Ejercicio%204.5.2.png)
 
-![Image Text](https://github.com/SamuRoj/Librer-a-Cu-ntica-No-2/blob/master/Ejercicio%204.5.3.png)
+![Image Text](https://github.com/SamuRoj/Librer-a-Cu-ntica-No-2/blob/master/Ejercicio%204.5.2.2.png)
 
 En las imágenes se puede ver como primero se toman dos estados básicos de spin y se realiza su producto tensor para conocer el sistema final, luego este mismo procedimiento se realiza con una partícula más y finalmente se generaliza para n partículas concluyendo que el tamaño del vector de estado final siempre será de tamaño 2^n donde n representa la cantidad de partículas, además se puede ver como el vector final puede resultar de la aplicación de un producto cartesiano entre cada uno de los n estados dados.
 
