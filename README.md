@@ -71,7 +71,7 @@ Dynamic(arrays, initial)            'Recibe un arreglo de matrices complejas y u
 ### Ejercicio 4.5.3
 Este ejercicio propone un estado de ejemplo phi y se debe concluir si el estado que se da es separable o de lo contrario es entrelazado.
 
-![Image Text]()
+![Image Text](https://github.com/SamuRoj/Librer-a-Cu-ntica-No-2/blob/master/Ejercicio%204.5.3.png)
 
 En la imagen anterior se expresan dos estados como se observa en la imagen, se propusieron los estados tsi y tsi prima, se realizó su producto tensor y se dió valores a cada una de las constantes c0, c1, c0 prima y c1 prima. Se puede ver que en este caso el estado final se puede expresar en términos de las constantes 0 y 1, para obtener el estado phi que se solicitaba por lo que se concluye que el estado es separable y no entrelazado.
 
