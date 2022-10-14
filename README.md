@@ -59,14 +59,20 @@ Eigenvectors(matrix)                'Determina los vectores propios de una matri
 
 ProbabilityVector(state, vector)    'Determina la probabilidad de transitar de un estado inicial a un eigenvector.'
 
-Dynamic(arrays, initial)            'Recibe un arreglo de matrices complejas y un estado inicial, determina si cada una de las matrices es unitaria y de ser así determina el estado final del sistema en el orden en que se dieron las matrices.s'
+Dynamic(arrays, initial)            'Recibe un arreglo de matrices complejas y un estado inicial, determina si cada una de las matrices es unitaria y de ser así determina el estado final del sistema en el orden en que se dieron las matrices.'
 ```
 
 ## Solución de los ejercicios propuestos
 
 ### Ejercicio 4.5.2
 
+Este ejercicio pide generalizar un estado de dos partículas que cuentan con spin, luego esto se debe realizar con n partículas
 
+![Image Text](https://github.com/SamuRoj/Librer-a-Cu-ntica-No-2/blob/master/Ejercicio%204.5.3.png)
+
+![Image Text](https://github.com/SamuRoj/Librer-a-Cu-ntica-No-2/blob/master/Ejercicio%204.5.3.png)
+
+En las imágenes se puede ver como primero se toman dos estados básicos de spin y se realiza su producto tensor para conocer el sistema final, luego este mismo procedimiento se realiza con una partícula más y finalmente se generaliza para n partículas concluyendo que el tamaño del vector de estado final siempre será de tamaño 2^n donde n representa la cantidad de partículas, además se puede ver como el vector final puede resultar de la aplicación de un producto cartesiano entre cada uno de los n estados dados.
 
 ### Ejercicio 4.5.3
 Este ejercicio propone un estado de ejemplo phi y se debe concluir si el estado que se da es separable o de lo contrario es entrelazado.
