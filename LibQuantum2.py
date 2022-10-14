@@ -60,7 +60,14 @@ def ProbabilityVector(state, vector):
     result = Cl.Module((result)) ** 2
     return round(result, 5)
 
-
+def Dynamic(arrays, initial):
+    final = initial
+    for i in arrays:
+        if Ml.Unitary(i):
+            final = Ml.Matrix_Action(i, final)
+        else:
+            return "La matriz no es unitaria"
+    return final
 
 # Declaración de variables
 v1 = ((0, 3), (-2, 0))
@@ -73,36 +80,18 @@ tsi = ((2, 1), (-1, 2), (0, 1), (1, 0), (3, -1), (2, 0), (0, -2), (-2, 1), (1, -
 phi = ((-1, -4), (2, -3), (-7, 6), (-1, 1), (-5, -3), (5, 0), (5, 8), (4, -4), (8, -7), (2, -7))
 alpha = (((2**(1/2)/2), 0), ((-2**(1/2)/2), 0))
 omega = (((3, 0), (1, 2)), ((1, -2), (-1, 0)))
-
-print("Solución a ejercicios propuestos")
-print()
-print("Ejercicio 4.3.1")
 spin = ((1,0), (0,0))
 matrix = ((0+0j, 1+0j), (1+0j, 0+0j))
 vectors = Vectors(Eigenvectors(matrix))
-print(f"""Los estados a los que se puede transitar son:""")
-for i in vectors:
-    Ml.print_vector(i)
-print()
 print("Ejercicio 4.3.2")
 print("Las probabilidades de transitar a algún eigenvector son:")
 for i in vectors:
     print(ProbabilityVector(spin, i))
-print()
-print("Ejercicio 4.4.1")
 u1 = (((0,0), (1,0)), ((1,0), (0,0)))
 u2 = (((2**(1/2)/2,0), (2**(1/2)/2,0)), ((2**(1/2)/2,0), (-2**(1/2)/2,0)))
-print(Ml.Unitary(u1))
-print(Ml.Unitary(u2))
 result = Ml.Matrix_Product(u1, u2)
-print(Ml.Unitary(result))
-print("Al ser todos los resultados True, se confirma que las matrices dadas y su producto son unitarias.")
-print()
-print("Ejericicio 4.4.2")
 billiard = (((0,0), (1/2**(1/2),0), (1/2**(1/2),0), (0,0)),\
             ((0, 1/2**(1/2)), (0,0), (0,0), (1/2**(1/2), 0)),\
             ((1/2**(1/2), 0), (0,0), (0,0), (0, 1/2**(1/2))),\
             ((0,0), (1/2**(1/2),0), (-1/2**(1/2),0), (0,0)))
 position = ((1,0), (0,0), (0,0), (0,0))
-print(Probability(Ql.Clicks(billiard, position, 3), 3))
-print("La probabilidad de que se encuentre en la posición 3 es de 0%")

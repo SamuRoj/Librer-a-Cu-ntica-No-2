@@ -58,7 +58,22 @@ Eigenvalues(matrix)                 'Determina los valores propios de una matriz
 Eigenvectors(matrix)                'Determina los vectores propios de una matriz.'
 
 ProbabilityVector(state, vector)    'Determina la probabilidad de transitar de un estado inicial a un eigenvector.'
+
+Dynamic(arrays, initial)            'Recibe un arreglo de matrices complejas y un estado inicial, determina si cada una de las matrices es unitaria y de ser así determina el estado final del sistema en el orden en que se dieron las matrices.s'
 ```
+
+## Solución de los ejercicios propuestos
+
+### Ejercicio 4.5.2
+
+
+
+### Ejercicio 4.5.3
+Este ejercicio propone un estado de ejemplo phi y se debe concluir si el estado que se da es separable o de lo contrario es entrelazado.
+
+![Image Text]()
+
+En la imagen anterior se expresan dos estados como se observa en la imagen, se propusieron los estados tsi y tsi prima, se realizó su producto tensor y se dió valores a cada una de las constantes c0, c1, c0 prima y c1 prima. Se puede ver que en este caso el estado final se puede expresar en términos de las constantes 0 y 1, para obtener el estado phi que se solicitaba por lo que se concluye que el estado es separable y no entrelazado.
 
 ## Realizado con
 

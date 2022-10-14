@@ -1,10 +1,12 @@
 import LibQuantum2 as Lib
+import LibQuantum as Ql
 import Complex_Lib as Cl
 import Matrix_Lib as Ml
 import unittest
 
 class MyTestCase(unittest.TestCase):
     def test_something(self):
+        print("Ejemplos")
         print("Probabilidad de una posición particular.")
         print(Lib.Probability(Lib.v1, 0))
         self.assertAlmostEqual(Lib.Probability(Lib.v1, 0), 0.69231)
@@ -41,6 +43,32 @@ class MyTestCase(unittest.TestCase):
         print("Ejemplo de la varianza de la matriz ")
         print(Cl.Print_Complex(Lib.Variance(Lib.omega, Lib.alpha)))
         self.assertAlmostEqual(Lib.Variance(Lib.omega, Lib.alpha), (8, 0))
+        print()
+        print("Solución de los ejercicios propuestos.")
+        print()
+        print("Ejercicio 4.3.1")
+        print(f"""Los estados a los que se puede transitar son:""")
+        for i in Lib.vectors:
+            print()
+            Ml.print_vector(i)
+        print()
+        self.assertAlmostEqual(Lib.Vectors(Lib.Eigenvectors(Lib.matrix)), (((-0.70711, 0.0), (0.70711, 0.0)), ((0.70711, 0.0), (0.70711, 0.0))))
+        print("Ejercicio 4.3.2")
+        
+        print()
+        print("Ejercicio 4.4.1")
+        print(Ml.Unitary(Lib.u1))
+        print(Ml.Unitary(Lib.u2))
+        print(Ml.Unitary(Lib.result))
+        self.assertAlmostEqual(Ml.Unitary(Lib.u1), True)
+        self.assertAlmostEqual(Ml.Unitary(Lib.u2), True)
+        self.assertAlmostEqual(Ml.Unitary(Lib.result), True)
+        print("Al ser todos los resultados True, se confirma que las matrices dadas y su producto son unitarias.")
+        print()
+        print("Ejercicio 4.4.2")
+        print(Lib.Probability(Ql.Clicks(Lib.billiard, Lib.position, 3), 3))
+        self.assertAlmostEqual(Lib.Probability(Ql.Clicks(Lib.billiard, Lib.position, 3), 3), 0)
+        print("La probabilidad de que se encuentre en la posición 3 es de 0%")
 
 
 if  __name__ == '__main__':
