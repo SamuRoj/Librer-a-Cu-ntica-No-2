@@ -1,6 +1,6 @@
 # Teoría cuántica básica, observables y medidas
 
-Librería realizada en Python que contiene operaciones entre vectores y matrices para determinar la solución a un problema cuántico, como la probabilidad de un estado de un vector, l transición de un vector a otro, entre otras.
+Librería realizada en Python que contiene operaciones entre vectores y matrices para determinar la solución a un problema cuántico, como la probabilidad de un estado de un vector, la transición de un vector a otro, entre otras.
 
 ## Para Empezar
 
@@ -10,7 +10,7 @@ Lenguaje de programación Python, Idle o ejecución del programa desde terminal.
 
 ### Instalación y Ejecución
 
-Descarga de los archivos LibQuantum2, LibQuantum.py, Matrix_Lib.py, Complex_Lib.py y Tests.py en un mismo directorio, además es necesario tener instalada la librería numpy, para la ejecución de una de las funciones que se encuentra dentro.
+Descarga de los archivos LibQuantum2, LibQuantum.py, Matrix_Lib.py, Complex_Lib.py y Tests.py en un mismo directorio, además es necesario tener instalada la librería numpy, para la ejecución de una de las funciones que se encuentran dentro.
 
 ## Ejecución de Pruebas
 
@@ -49,13 +49,13 @@ Probability(vector, state)          'Dado un vector y una posición determina la
 
 Transition(vector1, vector2)        'Dado dos vectores determina la probabilidad de que el vector 1 transite al vector 2.'
 
-Mean(matrix, vector)                'Determina el valor esperado de una matriz y la matriz final luego de aplicar este.'
+Mean(matrix, vector)                'Determina el valor esperado de una matriz y la matriz final luego de aplicar este valor.'
 
 Variance(matrix, vector)            'Determina la varianza dados una matriz y un vector.'
 
-Eigenvalues(matrix)                 'Determina los valores propios de una matriz.' 
+Eigenvalues(matrix)                 'Retorna los valores propios de una matriz.' 
 
-Eigenvectors(matrix)                'Determina los vectores propios de una matriz.'
+Eigenvectors(matrix)                'Retorna los vectores propios de una matriz.'
 
 ProbabilityVector(state, vector)    'Determina la probabilidad de transitar de un estado inicial a un eigenvector.'
 
@@ -79,7 +79,7 @@ Este ejercicio propone un estado de ejemplo phi y se debe concluir si el estado 
 
 ![Image Text](https://github.com/SamuRoj/Librer-a-Cu-ntica-No-2/blob/master/Ejercicio%204.5.3.png)
 
-En la imagen anterior se expresan dos estados como se observa en la imagen, se propusieron los estados tsi y tsi prima, se realizó su producto tensor y se dió valores a cada una de las constantes c0, c1, c0 prima y c1 prima. Se puede ver que en este caso el estado final se puede expresar en términos de las constantes 0 y 1, para obtener el estado phi que se solicitaba por lo que se concluye que el estado es separable y no entrelazado.
+En la imagen anterior se expresan dos estados como se observa en la imagen, se propusieron los estados tsi y tsi prima, se realizó su producto tensor y se dió valores a cada una de las constantes c0, c1, c0 prima y c1 prima. Se puede ver que en este caso el estado final se puede expresar en términos de las constantes 0 y 1, para obtener el estado phi que se solicitaba, por lo que se concluye que el estado es separable y no entrelazado.
 
 ## Realizado con
 
