@@ -83,10 +83,6 @@ omega = (((3, 0), (1, 2)), ((1, -2), (-1, 0)))
 spin = ((1,0), (0,0))
 matrix = ((0+0j, 1+0j), (1+0j, 0+0j))
 vectors = Vectors(Eigenvectors(matrix))
-print("Ejercicio 4.3.2")
-print("Las probabilidades de transitar a algún eigenvector son:")
-for i in vectors:
-    print(ProbabilityVector(spin, i))
 u1 = (((0,0), (1,0)), ((1,0), (0,0)))
 u2 = (((2**(1/2)/2,0), (2**(1/2)/2,0)), ((2**(1/2)/2,0), (-2**(1/2)/2,0)))
 result = Ml.Matrix_Product(u1, u2)
@@ -95,3 +91,7 @@ billiard = (((0,0), (1/2**(1/2),0), (1/2**(1/2),0), (0,0)),\
             ((1/2**(1/2), 0), (0,0), (0,0), (0, 1/2**(1/2))),\
             ((0,0), (1/2**(1/2),0), (-1/2**(1/2),0), (0,0)))
 position = ((1,0), (0,0), (0,0), (0,0))
+initial = ((1,0), (0,0))
+matrixH = (((1/2**(1/2),0), (1/2**(1/2),0)), ((1/2**(1/2),0), (-1/2**(1/2),0)))
+matrixB = (((1/2**(1/2),0), (-1/2**(1/2),0)), ((1/2**(1/2),0), (1/2**(1/2),0)))
+arrays = (matrixH, matrixB)

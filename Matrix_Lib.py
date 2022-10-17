@@ -5,7 +5,7 @@ def RoundDecimal(matrix):
     for i in range(len(matrix)):
         for j in range(len(matrix[0])):
             for k in range(2):
-                result[i][j][k] = int(result[i][j][k])
+                result[i][j][k] = round(result[i][j][k], 0)
     return result
 
 def To_List(matrix):
